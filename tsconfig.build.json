@@ -1,6 +1,9 @@
 {
 	"compilerOptions": {
+		"target": "ES2023",
 		"module": "commonjs",
+		"outDir": "./dist",
+		"rootDir": "./src",
 		"declaration": true,
 		"noImplicitAny": false,
 		"noUnusedLocals": false,
@@ -8,10 +11,7 @@
 		"noLib": false,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"target": "es6",
 		"sourceMap": false,
-		"outDir": "./dist",
-		"rootDir": "./src",
 		"skipLibCheck": true
 	},
 	"include": [
