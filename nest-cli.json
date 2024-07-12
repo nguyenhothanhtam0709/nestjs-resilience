@@ -6,10 +6,7 @@
     "deleteOutDir": true,
     "typeCheck": true,
     "builder": {
-      "type": "tsc",
-      "options": {
-        "project": "tsconfig.build.json"
-      }
+      "type": "tsc"
     }
   }
 }

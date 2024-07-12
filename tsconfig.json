@@ -1,7 +1,17 @@
 {
-	"extends": "./tsconfig.build.json",
-	"include": [
-		"src/**/*",
-		"test/**/*",
-	]
+	"compilerOptions": {
+		"target": "ES2023",
+		"module": "commonjs",
+		"outDir": "./dist",
+		"baseUrl": "./",
+		"declaration": true,
+		"noImplicitAny": false,
+		"noUnusedLocals": false,
+		"removeComments": false,
+		"noLib": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"sourceMap": false,
+		"skipLibCheck": true
+	},
 }
