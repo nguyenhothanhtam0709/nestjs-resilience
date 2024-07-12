@@ -19,12 +19,12 @@ class UserService {
 	@UseResilience(timeoutStrategy, retryStrategy)
 	async getUsers() {
 		if (this.usersCalls === 0) {
-			this.usersCalls += 1;
+			this.usersCalls++;
 			throw new Error('Error');
 		}
 
 		if (this.usersCalls === 1) {
-			this.usersCalls += 1;
+			this.usersCalls++;
 
 			setTimeout(() => {
 				Promise.resolve();
@@ -49,11 +49,13 @@ class UserService {
 	}
 }
 
-describe('Resilience Decorator', () => {
-	const userService = new UserService();
+describe('UseResilience decorator', () => {
+	let userService: UserService;
 
 	beforeEach(async () => {
-		await jest.advanceTimersByTimeAsync(10000);
+		userService = new UserService();
+
+		await jest.advanceTimersByTimeAsync(10_000);
 		jest.restoreAllMocks();
 	});
 
