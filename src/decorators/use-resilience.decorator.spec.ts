@@ -1,10 +1,6 @@
-import {
-	CircuitBreakerStrategy,
-	FixedBackoff,
-	RetryStrategy,
-	TimeoutStrategy,
-	UseResilience
-} from '../../src';
+import { CircuitBreakerStrategy, RetryStrategy, TimeoutStrategy } from '../strategies';
+import { UseResilience } from './use-resilience.decorator';
+import { FixedBackoff } from '../helpers';
 
 const timeoutStrategy = new TimeoutStrategy(100);
 const retryStrategy = new RetryStrategy({
