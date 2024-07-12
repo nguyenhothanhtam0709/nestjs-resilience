@@ -87,5 +87,6 @@
 	"engines": {
 		"node": "^22"
 	},
+	"engineStrict": true,
 	"packageManager": "pnpm@9.4.0"
 }
