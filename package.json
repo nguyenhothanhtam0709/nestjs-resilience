@@ -11,7 +11,8 @@
 		"prepare": "husky install .github/husky",
 		"format": "prettier --write \"src/**/*.ts\"",
 		"lint": "eslint --ignore-path .gitignore src/**/*.ts",
-		"test": "jest"
+		"test": "jest --config jest.config.json",
+		"test:cov": "jest --config jest.config.json --coverage"
 	},
 	"lint-staged": {
 		"*.ts": "npm run format"
